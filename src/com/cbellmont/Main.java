@@ -7,18 +7,10 @@ public class Main {
     public static final ArrayList<String> list = new ArrayList<>();
 
     public static void main(String[] args) {
-
-        try {
-        Cliente cliente = new Cliente();
         Camarero camarero = new Camarero();
-        camarero.start();
-        cliente.join();
+        Cliente cliente = new Cliente(camarero);
+        // Es importante que empiece el camarero ya que se queda esperando.
         cliente.start();
-        camarero.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
     }
 
 
