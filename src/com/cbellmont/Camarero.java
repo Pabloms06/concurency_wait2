@@ -8,7 +8,7 @@ public class Camarero extends Thread {
         try {
             while (true) {
                 {
-                    prepararComanda();
+                    prepararComanda(camarero);
                 }
             }
         } catch (InterruptedException e) {
