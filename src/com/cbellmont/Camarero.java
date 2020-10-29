@@ -7,9 +7,7 @@ public class Camarero extends Thread {
         try {
             while (true) {
                 synchronized (Main.list){
-                    Main.list.wait();
                     prepararComanda();
-                    Main.list.notify();
                 }
             }
         } catch (InterruptedException e) {
